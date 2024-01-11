@@ -1,12 +1,31 @@
-<head>
-  <script>
-    function call(bool) {
-      HbxApi.closeReturnsWindow(bool)
-    }
-  </script>
-</head>
-<body>
-<h1>Hello!</h1>
-<a href="1.html"><h1>click me</h1></a>
-<a onclick="call(true)"><h1>click me JS</h1></a>
-</body>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
+    <style>
+      div {
+        background-color: lightgray;
+        width: 100%;
+        height: 50px;
+        transition: height 0.5s;
+      }
+      .high {
+        height: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="changeHeight()">Change Height</button>
+    <p>Citizens of France, Germany, Italy, Japan, Singapore and Spain can enjoy visa-free or visa-on-arrival access to an incredible 194 destinations around the world – the highest number recorded since the Henley Passport Index began tracking global travel freedoms 19 years ago. The index is created by London-based global citizenship and residence advisory firm Henley & Partners, using exclusive data from the International Air Transport Association (IATA).</p>
+    <div id="myDiv">
+        <p style="background-color:yellow;padding:8px">Hello</p>
+    </div>
+    <button onclick="changeHeight()">Change Height Again</button>
+    <p>The Asian nations of Japan and Singapore have dominated the No.1 spot for the past five years, but the new top five is a triumphant rise for Europe. Finland and Sweden are tied with South Korea in second place – with easy access to 193 destinations –while Austria, Denmark, Ireland and the Netherlands come third (with 192 destinations).</p>
+    <script>
+      function changeHeight() {
+        var div = document.getElementById("myDiv");
+        div.classList.toggle("high");
+      }
+    </script>
+  </body>
+</html>
